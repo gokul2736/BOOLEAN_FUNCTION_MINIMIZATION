@@ -18,6 +18,17 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Logic Diagram**
 
+FUNCTION 1  **K-map**
+
+![Screenshot 2024-12-03 224457](https://github.com/user-attachments/assets/de103be7-f809-4a3d-b63b-43514bd26512)
+
+
+FUNCTION 2   **K-map**
+
+![Screenshot 2024-12-03 224502](https://github.com/user-attachments/assets/c20052a9-c001-4383-838d-8eedb8b4bb4b)
+
+
+
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -30,28 +41,66 @@ Hardware – PCs, Cyclone II , USB flasher
 
 5.	For different input combinations generate the timing diagram.
 
-![image](https://github.com/user-attachments/assets/e1790f7f-97b4-43da-bf3b-b337935c4f8b)
 
 **Program:**
 
- Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+```
+FUNCTION 1
 
-Developed by: Markandeyan Gokul. Register Number: 212224240086
+module function1(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+endmodule
 
-![image](https://github.com/user-attachments/assets/6aa1ffce-f6f4-443f-a2ae-868e502c4caa)
+FUCTION 2
+
+module funct2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
+endmodule
+```
+
+FUNCTION 1
+
+![de exp2 function1 ss 3](https://github.com/user-attachments/assets/98cd2d90-86df-4607-ab09-d08254da25d5)
+
+FUNCTION 2
+
+![de exp2a funct2 ss 3](https://github.com/user-attachments/assets/196e311b-aaca-4804-9e2f-2c158a6fd40b)
+
+
+Developed by: Markandeyan Gokul
+Register No: 212224240086
 
 **RTL realization**
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/3ce83df4-232f-4350-be88-9d54b1758f47)
-
 **RTL**
+
+FUNCTION 1
+
+![de exp2 function1 ss2](https://github.com/user-attachments/assets/bb201ccf-8ba7-4d19-9f2b-7e1c3fc1d382)
+
+FUNCTION 2
+
+![de exp2a funct2 ss2](https://github.com/user-attachments/assets/0ebd5f2c-2959-424b-9baf-21228cd19880)
+
 
 **Timing Diagram**
 
-![image](https://github.com/user-attachments/assets/95911375-cef0-404e-a0e3-571c94d1be94)
+FUNCTION 1
+
+![de exp 2 function1 ss1](https://github.com/user-attachments/assets/a3e15bec-9289-492f-a834-65d5808fc798)
+
+FUMCTION 2
+
+![de exp2a funct2 ss1](https://github.com/user-attachments/assets/6606e101-9a0f-4f8e-a5d3-b4020c995c6d)
+
 
 **Result:**
 
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
+
